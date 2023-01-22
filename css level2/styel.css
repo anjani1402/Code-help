@@ -1,0 +1,20 @@
+.box{
+    border: 2px;
+    height: 200px;
+    width: 150px;
+    background-image: linear-gradient(green, blue);
+}
+
+.few{
+    border: 2px;
+    height: 200px;
+    width: 200px;
+    background-image: radial-gradient(circle, red, yellow, pink);
+}
+
+.many{
+    border: 2px;
+    height: 200px;
+    width: 150px;
+    background-image: conic-gradient(red, yellow, green);
+}
