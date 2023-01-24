@@ -1,40 +1,46 @@
 *{
-    padding: 0px;
+    padding:o;
+    margin: 0;
     box-sizing: border-box;
-    margin: 0px;
-}
-
-.hiremebutton{
-    position: absolute;
-    top: 50%;
-    width: 130px;
-    height: 40px;
-    color: white;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'lato', sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3 ease;
-    background: rgb(227, 0, 0);
-}
-
-.hiremebutton:hover{
-    box-shadow: inset 130px 0 0 0 rgb(176, 119, 119);
-    transition-delay: 0.5s;
-    transition-property: margin-left, color;
 }
 
 .wrapper{
-    /* text-align: center; */
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
 }
 
-.btn{
-    background: rgb(227, 0, 0);
+.hiremebutton{
+    position: relative;
+    background-color: rgb(222, 29, 29);
+    color: white;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    width: fit-content;
+    font-size: 18px;
+    padding: 0.8rem 2.3rem;
+    cursor: pointer;
     z-index: 1;
-    border: none;
 }
+
+.hiremebutton::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(16, 1, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.hiremebutton:hover::before{
+    transform: scaleX(1);
+    z-index: -1;
+}
+
 
